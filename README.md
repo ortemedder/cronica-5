@@ -1,0 +1,2 @@
+# cronica-5
+CRÓNICA EN PANTALLA DE 5
