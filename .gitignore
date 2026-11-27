@@ -1,0 +1,4 @@
+# No subir nunca la clave del WiFi
+cronica/mi_wifi.h
+build/
+*.zip

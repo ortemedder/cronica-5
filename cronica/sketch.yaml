@@ -1,0 +1,2 @@
+# Ajustes de la placa (Arduino IDE 2 / arduino-cli): ESP32S3 Dev Module, PSRAM OPI, 16 MB, FATFS
+default_fqbn: esp32:esp32:esp32s3:PSRAM=opi,FlashSize=16M,PartitionScheme=app3M_fat9M_16MB
