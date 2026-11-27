@@ -1,7 +1,7 @@
 // config.h - version, direcciones de los datos, tiempos y colores de La Cronica
 #pragma once
 
-#define VERSION "v0.1"
+#define VERSION "v0.1.1"
 
 // Datos (los mismos que lee la web cdsn-web)
 const char *URL_FACCION = "https://raw.githubusercontent.com/ortemedder/cdsn-datos/main/faccion.json";

@@ -26,10 +26,10 @@ public:
       c.pin_d5  = 5;  c.pin_d6  = 6;  c.pin_d7  = 7;  c.pin_d8  = 15; c.pin_d9  = 16; c.pin_d10 = 4;   // verde
       c.pin_d11 = 45; c.pin_d12 = 48; c.pin_d13 = 47; c.pin_d14 = 21; c.pin_d15 = 14;   // rojo
       c.pin_henable = 40; c.pin_vsync = 41; c.pin_hsync = 39; c.pin_pclk = 42;
-      c.freq_write = 14000000;               // 14 MHz: deja aire a la PSRAM (con 16 a veces la imagen se desplaza)
+      c.freq_write = 16000000;               // 16 MHz, como la demo de fabrica
       c.hsync_polarity = 0; c.hsync_front_porch = 8; c.hsync_pulse_width = 4; c.hsync_back_porch = 8;
       c.vsync_polarity = 0; c.vsync_front_porch = 8; c.vsync_pulse_width = 4; c.vsync_back_porch = 8;
-      c.pclk_idle_high = 1;
+      c.pclk_active_neg = 1; c.pclk_idle_high = 0; c.de_idle_high = 0;   // v0.1.1: con pclk_idle_high = 1 salia en blanco
       _bus.config(c); }
     _panel.setBus(&_bus);
     { auto c = _luz.config();
