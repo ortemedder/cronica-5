@@ -1,7 +1,8 @@
 // config.h - version, direcciones de los datos, tiempos y colores de La Cronica
 #pragma once
 
-#define VERSION "v0.1.1"
+#define VERSION "v0.1.2"
+#define TELETIPO 1   // 0 = teletipo quieto (para probar si el parpadeo viene de moverlo)
 
 // Datos (los mismos que lee la web cdsn-web)
 const char *URL_FACCION = "https://raw.githubusercontent.com/ortemedder/cdsn-datos/main/faccion.json";
@@ -10,6 +11,7 @@ const char *URL_PARTE   = "https://raw.githubusercontent.com/ortemedder/cdsn-dat
 
 const uint32_t CADA_MS      = 5 * 60 * 1000UL;   // descarga cada 5 min (como la web)
 const uint32_t REINTENTO_MS = 60 * 1000UL;       // si falla, otra vez al minuto
+const uint32_t FRAME_MS     = 50;                 // 20 imagenes por segundo (menos trabajo para la PSRAM)
 const uint32_t VUELTA_MS    = 5 * 60 * 1000UL;   // sin tocar 5 min: vuelve arriba sola
 const char *ZONA_HORARIA = "CET-1CEST,M3.5.0,M10.5.0/3";   // hora de Espana peninsular
 

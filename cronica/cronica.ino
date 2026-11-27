@@ -92,12 +92,13 @@ void setup() {
   tft.fillScreen(C_FONDO);
   rehace();
   pintaCabecera();
+  pintaTeletipo(0);
   tTele = millis();
 }
 
 void loop() {
   uint32_t ms = millis();
-  if (recogeNuevos()) { rehace(); pintaCabecera(); tCab = ms; }
+  if (recogeNuevos()) { rehace(); pintaCabecera(); pintaTeletipo(0); tCab = ms; }
   miraTactil();
   if (!tocando && vel != 0) {   // inercia
     float dt = (ms - tIner) / 1000.0f; if (dt > 0.1f) dt = 0.1f;
@@ -109,8 +110,8 @@ void loop() {
   if (!tocando && vel == 0 && moviendo) { moviendo = false; repinta = true; }
   if (scroll > 0 && !tocando && vel == 0 && ms - tToque > VUELTA_MS) vel = -max(1500.0f, scroll * 3.0f);   // vuelve arriba sola
   if (ms - tCab > 30000) { pintaCabecera(); tCab = ms; }   // hora y estado
-  if (ms - tFrame >= 33) {   // ~30 imagenes por segundo
-    pintaTeletipo((ms - tTele) / 1000.0f); tTele = ms;
+  if (ms - tFrame >= FRAME_MS) {
+    if (TELETIPO) { pintaTeletipo((ms - tTele) / 1000.0f); tTele = ms; }
     if (repinta) { pintaContenido(scroll); repinta = false; }
     tFrame = ms;
   }

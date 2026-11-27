@@ -18,7 +18,7 @@ public:
       c.offset_x = 0; c.offset_y = 0;
       _panel.config(c); }
     { auto c = _panel.config_detail();
-      c.use_psram = 1;                       // la imagen de la pantalla, en la PSRAM
+      c.use_psram = 2;                       // v0.1.2: la imagen entera en la PSRAM (mitad y mitad parpadeaba)
       _panel.config_detail(c); }
     { auto c = _bus.config();
       c.panel = &_panel;

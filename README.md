@@ -37,6 +37,7 @@ Capturas del simulador: `imagenes/`.
 - Las imágenes con datos de la web (marcador de la guerra, influencia de 7 días) necesitan `sistemas` de faccion.json: de momento no salen.
 
 ## Versiones
+- v0.1.2 (27/11/2026): contra el parpadeo: imagen entera en la PSRAM y 20 imágenes por segundo (TELETIPO 0 en config.h para dejarlo quieto).
 - v0.1.1 (27/11/2026): arreglada la pantalla en blanco (reloj de la pantalla).
 - v0.1 (27/11/2026): primera versión (probada en el simulador; falta probarla en la placa).
 
